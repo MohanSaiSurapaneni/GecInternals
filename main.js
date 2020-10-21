@@ -3,6 +3,15 @@ var ct,mid,internals;
 var outputTable,analysisTable;
 var outHeading,analysisHeading;
 
+outputTable = document.getElementById("Internals");
+analysisTable = document.getElementById("gradeAnalysis");
+
+outHeading = document.getElementById("outHeading");
+analysisHeading = document.getElementById("analysisHeading")
+
+var outputDiv = document.getElementById("output");
+var isAnalysisShown = false;
+
 function calculate() {
 
 	c1 = document.getElementById("c1").value;
@@ -34,9 +43,7 @@ function calculate() {
 			mid = Math.ceil(((max * 3) + min) * 3 / 16);
 			internals = (ct+mid);
 
-			let outputDiv = document.getElementById("output");
-			document.getElementById("outHeading").innerHTML = "Internals";
-
+			outHeading.innerHTML = "Internals";
 
 			if(outputDiv.childElementCount == 2) {
 				let btn = document.createElement("BUTTON");   
@@ -47,7 +54,6 @@ function calculate() {
 				outputDiv.appendChild(btn);   
 			}
 
-			outputTable = document.getElementById("Internals");
 			outputTable.setAttribute("border","1");
 
 			outputTable.rows[0].cells[0].innerHTML = "Class Test : ";
@@ -60,14 +66,18 @@ function calculate() {
 		}
 		
 	}
-	
 
+	if(isAnalysisShown) {
+		hideAnalysis();
+	}
+	
 }
 
-function showAnalysis() {
-	document.getElementById("analysisHeading").innerHTML = "Grade Analysis";
 
-	analysisTable = document.getElementById("gradeAnalysis");
+function showAnalysis() {
+	
+	analysisHeading.innerHTML = "Grade Analysis";
+
 	analysisTable.setAttribute("border","1");
 	analysisTable.style.marginBottom = "50px";
 
@@ -103,10 +113,22 @@ function showAnalysis() {
 	analysisTable.rows[7].cells[1].innerHTML = 
 	(40 - internals) >= 21 ? (40-internals) : "21";
 
+	isAnalysisShown = true;
 }
 
 function hideAnalysis() {
 	
+	analysisHeading.innerHTML = "";
+	let rowLen = analysisTable.rows.length;
+	alert(rowLen);
+	for(let i=0;i<rowLen;i++) {
+
+		analysisTable.rows[i].cells[0].innerHTML = "";
+		analysisTable.rows[i].cells[1].innerHTML = "";
+	}
+	analysisTable.setAttribute("border","0");
+	
+	isAnalysisShown = false;
 }
 
 function reset() {
