@@ -1,0 +1,39 @@
+#input {
+	width: 100%;
+
+}
+
+#output {
+	width: 100%;
+
+}
+
+#analysis {
+	width: 100%;
+}
+
+.inpt {
+	height: 35px;
+	width: 120px;
+}
+
+.but {
+
+	height: 40px;
+	min-width: 80px;
+	font-size: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+table {
+
+}
+td {
+	font-size: large;
+	text-align: center;
+
+}
+pre {
+	padding: 0px;
+	margin: 0px;
+}

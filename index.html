@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GEC Internals</title>
+		<link rel="stylesheet" type="text/css" href="gecStyle.css">
+		<script type="text/javascript" src="main.js"></script>
+	</head>
+	<body>
+		<center>
+			<div id = "input">
+				<h3><u>Gec Internals</u></h3>
+				<table cellpadding="5px" cellspacing="5px">
+					<tr>
+						<td><input id="c1" class="inpt" 
+							placeholder="CT-1 marks" type="text"></td>
+						<td><input id="m1" class="inpt" 
+							placeholder="Mid-1 marks" type="text"></td>
+					</tr>
+					<tr>
+						<td><input id="c2" class="inpt" 
+							placeholder="CT-2 marks" type="text"></td>
+						<td><input id="m2" class="inpt" 
+							placeholder="Mid-2 marks" type="text"></td>
+					</tr>
+					<tr>
+						<td>
+							<button class="but" onclick="reset()">
+								Reset
+							</button>
+						</td>
+						<td>
+							<button class="but" onclick="calculate()">
+								Calculate
+							</button> 
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id = "output">
+				<h3><u id="outHeading"></u></h3>
+				<table id="Internals" 
+				cellpadding="5px" cellspacing="5px">
+					<tr><td></td><td></td></tr>
+					<tr><td></td><td></td></tr>
+					<tr><td></td><td></td></tr>
+				</table>
+			</div>
+			<div id = "analysis">
+				<h3><u id="analysisHeading"></u></h3>
+				<table id="gradeAnalysis"
+				cellpadding="5px" cellspacing="5px">
+					<tr><td></td><td></td></tr>
+					<tr><td></td><td></td></tr>
+					<tr><td></td><td></td></tr>
+					<tr><td></td><td></td></tr>
+					<tr><td></td><td></td></tr>
+					<tr><td></td><td></td></tr>
+					<tr><td></td><td></td></tr>
+					<tr><td></td><td></td></tr>
+				</table>
+			</div>
+		</center>
+		
+	</body>
+</html>
